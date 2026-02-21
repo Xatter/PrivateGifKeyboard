@@ -18,7 +18,7 @@ final class AppViewModel: ObservableObject {
         self.hasCompletedSetup = UserDefaults.standard.bool(forKey: "hasCompletedSetup")
 
         self.containerURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.gifkeyboard.shared"
+            forSecurityApplicationGroupIdentifier: "group.com.extroverteddeveloper.GifKeyboard.shared"
         ) ?? FileManager.default.temporaryDirectory
 
         self.iCloudURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?

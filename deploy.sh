@@ -9,7 +9,7 @@ TEAM_ID="SQ7Z33XY27"
 
 # Build iOS app
 echo "Building GifKeyboard (iOS)..."
-xcodebuild -project "$PROJECT" -scheme "GifKeyboard" -destination "id=$DEVICE_UDID" -configuration "$CONFIG" DEVELOPMENT_TEAM="$TEAM_ID" build
+xcodebuild -project "$PROJECT" -scheme "GifKeyboard" -destination "id=$DEVICE_UDID" -configuration "$CONFIG" DEVELOPMENT_TEAM="$TEAM_ID" CODE_SIGN_STYLE=Automatic build
 
 # Find built app
 APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData/GifKeyboard-*/Build/Products/Debug-iphoneos -name "GifKeyboard.app" -type d 2>/dev/null | head -1)
@@ -31,7 +31,7 @@ if xcrun devicectl device install app --device "$DEVICE_UUID" "$APP_PATH" 2>/dev
 
     echo ""
     echo "Launching iOS app..."
-    xcrun devicectl device process launch --device "$DEVICE_UUID" com.gifkeyboard.app
+    xcrun devicectl device process launch --device "$DEVICE_UUID" com.extroverteddeveloper.GifKeyboard
 else
     echo "devicectl failed, trying ios-deploy..."
     ios-deploy -b "$APP_PATH"

@@ -14,7 +14,7 @@ class KeyboardViewController: UIInputViewController {
         super.viewDidLoad()
 
         containerURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.gifkeyboard.shared"
+            forSecurityApplicationGroupIdentifier: "group.com.extroverteddeveloper.GifKeyboard.shared"
         ) ?? FileManager.default.temporaryDirectory
 
         loadIndex()

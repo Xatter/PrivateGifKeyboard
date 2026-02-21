@@ -21,7 +21,7 @@ struct ContentView: View {
                         GifGridView(
                             entries: viewModel.entries,
                             containerURL: FileManager.default.containerURL(
-                                forSecurityApplicationGroupIdentifier: "group.com.gifkeyboard.shared"
+                                forSecurityApplicationGroupIdentifier: "group.com.extroverteddeveloper.GifKeyboard.shared"
                             ) ?? FileManager.default.temporaryDirectory
                         )
                     }

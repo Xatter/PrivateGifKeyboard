@@ -6,7 +6,7 @@ struct GifKeyboardApp: App {
 
     init() {
         BGTaskScheduler.shared.register(
-            forTaskWithIdentifier: "com.gifkeyboard.app.refresh",
+            forTaskWithIdentifier: "com.extroverteddeveloper.GifKeyboard.refresh",
             using: nil
         ) { task in
             Self.handleBackgroundRefresh(task: task as! BGAppRefreshTask)
@@ -25,7 +25,7 @@ struct GifKeyboardApp: App {
     }
 
     static func scheduleBackgroundRefresh() {
-        let request = BGAppRefreshTaskRequest(identifier: "com.gifkeyboard.app.refresh")
+        let request = BGAppRefreshTaskRequest(identifier: "com.extroverteddeveloper.GifKeyboard.refresh")
         request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 60) // 1 hour
         try? BGTaskScheduler.shared.submit(request)
     }
@@ -34,7 +34,7 @@ struct GifKeyboardApp: App {
         scheduleBackgroundRefresh() // Reschedule for next time
 
         let containerURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.gifkeyboard.shared"
+            forSecurityApplicationGroupIdentifier: "group.com.extroverteddeveloper.GifKeyboard.shared"
         ) ?? FileManager.default.temporaryDirectory
 
         guard let iCloudURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?

@@ -4,7 +4,7 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>com.gifkeyboard.app.refresh</string>
+		<string>com.extroverteddeveloper.GifKeyboard.refresh</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
@@ -24,7 +24,7 @@
 	<string>1</string>
 	<key>NSUbiquitousContainers</key>
 	<dict>
-		<key>iCloud.com.gifkeyboard.app</key>
+		<key>iCloud.com.extroverteddeveloper.GifKeyboard</key>
 		<dict>
 			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
 			<true/>
