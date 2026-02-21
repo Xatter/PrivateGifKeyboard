@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct SetupView: View {
     let onFolderSelected: (URL) -> Void
