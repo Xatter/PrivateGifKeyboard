@@ -28,6 +28,8 @@ targets:
     info:
       path: GifKeyboard/Info.plist
       properties:
+        BGTaskSchedulerPermittedIdentifiers:
+          - com.gifkeyboard.app.refresh
         NSUbiquitousContainers:
           iCloud.com.gifkeyboard.app:
             NSUbiquitousContainerIsDocumentScopePublic: true
