@@ -8,19 +8,18 @@ final class AppViewModel: ObservableObject {
     @Published var lastSynced: Date?
     @Published var isSyncing = false
     @Published var syncStatus: String?
+    @Published private(set) var hasFolderSelected: Bool = false
 
-    private static let bookmarkKey = "selectedFolderBookmark"
+    static let bookmarkKey = "selectedFolderBookmark"
 
     private let containerURL: URL
-
-    var hasFolderSelected: Bool {
-        UserDefaults.standard.data(forKey: Self.bookmarkKey) != nil
-    }
 
     init() {
         self.containerURL = FileManager.default.containerURL(
             forSecurityApplicationGroupIdentifier: "group.com.extroverteddeveloper.GifKeyboard.shared"
         ) ?? FileManager.default.temporaryDirectory
+
+        hasFolderSelected = UserDefaults.standard.data(forKey: Self.bookmarkKey) != nil
 
         loadIndex()
     }
@@ -36,6 +35,7 @@ final class AppViewModel: ObservableObject {
             relativeTo: nil
         ) else { return }
         UserDefaults.standard.set(bookmark, forKey: Self.bookmarkKey)
+        hasFolderSelected = true
     }
 
     private func resolvedFolderURL() -> URL? {

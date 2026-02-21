@@ -37,8 +37,7 @@ struct GifKeyboardApp: App {
             forSecurityApplicationGroupIdentifier: "group.com.extroverteddeveloper.GifKeyboard.shared"
         ) ?? FileManager.default.temporaryDirectory
 
-        let bookmarkKey = "selectedFolderBookmark"
-        guard let data = UserDefaults.standard.data(forKey: bookmarkKey) else {
+        guard let data = UserDefaults.standard.data(forKey: AppViewModel.bookmarkKey) else {
             task.setTaskCompleted(success: false)
             return
         }
@@ -50,7 +49,7 @@ struct GifKeyboardApp: App {
         }
         if isStale {
             if let fresh = try? sourceURL.bookmarkData(options: [], includingResourceValuesForKeys: nil, relativeTo: nil) {
-                UserDefaults.standard.set(fresh, forKey: bookmarkKey)
+                UserDefaults.standard.set(fresh, forKey: AppViewModel.bookmarkKey)
             }
         }
         defer { sourceURL.stopAccessingSecurityScopedResource() }
