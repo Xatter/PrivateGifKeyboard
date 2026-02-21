@@ -4,9 +4,9 @@ struct ContentView: View {
     @StateObject private var viewModel = AppViewModel()
 
     var body: some View {
-        if !viewModel.hasCompletedSetup {
-            SetupView {
-                viewModel.completeSetup()
+        if !viewModel.hasFolderSelected {
+            SetupView { url in
+                viewModel.selectFolder(url)
             }
         } else {
             NavigationStack {
@@ -15,7 +15,7 @@ struct ContentView: View {
                         ContentUnavailableView(
                             "No GIFs Yet",
                             systemImage: "photo.on.rectangle.angled",
-                            description: Text("Add GIF files to the GifKeyboard folder in iCloud Drive, then tap Sync.")
+                            description: Text("Add GIF files to your chosen folder, then tap Sync.")
                         )
                     } else {
                         GifGridView(
@@ -42,12 +42,21 @@ struct ContentView: View {
                     }
                 }
                 .safeAreaInset(edge: .bottom) {
-                    if let lastSynced = viewModel.lastSynced {
-                        Text("Last synced: \(lastSynced.formatted(.relative(presentation: .named)))")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                            .padding(.bottom, 8)
+                    VStack(spacing: 4) {
+                        if let status = viewModel.syncStatus {
+                            Text(status)
+                                .font(.caption)
+                                .foregroundStyle(status.hasPrefix("Error") || status.hasPrefix("Sync error") ? .red : .secondary)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
+                        }
+                        if let lastSynced = viewModel.lastSynced {
+                            Text("Last synced: \(lastSynced.formatted(.relative(presentation: .named)))")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
                     }
+                    .padding(.bottom, 8)
                 }
             }
             .task {
