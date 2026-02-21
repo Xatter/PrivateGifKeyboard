@@ -48,10 +48,15 @@ struct GifKeyboardApp: App {
             task.setTaskCompleted(success: false)
             return
         }
+        if isStale {
+            if let fresh = try? sourceURL.bookmarkData(options: [], includingResourceValuesForKeys: nil, relativeTo: nil) {
+                UserDefaults.standard.set(fresh, forKey: bookmarkKey)
+            }
+        }
         defer { sourceURL.stopAccessingSecurityScopedResource() }
 
         let syncService = SyncService(sourceDirectory: sourceURL, containerDirectory: containerURL)
-        task.expirationHandler = {}
+        task.expirationHandler = { task.setTaskCompleted(success: false) }
         do {
             _ = try syncService.sync()
             task.setTaskCompleted(success: true)
