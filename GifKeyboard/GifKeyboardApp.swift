@@ -31,26 +31,27 @@ struct GifKeyboardApp: App {
     }
 
     static func handleBackgroundRefresh(task: BGAppRefreshTask) {
-        scheduleBackgroundRefresh() // Reschedule for next time
+        scheduleBackgroundRefresh()
 
         let containerURL = FileManager.default.containerURL(
             forSecurityApplicationGroupIdentifier: "group.com.extroverteddeveloper.GifKeyboard.shared"
         ) ?? FileManager.default.temporaryDirectory
 
-        guard let iCloudURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?
-            .appendingPathComponent("Documents")
-            .appendingPathComponent("GifKeyboard") else {
+        let bookmarkKey = "selectedFolderBookmark"
+        guard let data = UserDefaults.standard.data(forKey: bookmarkKey) else {
             task.setTaskCompleted(success: false)
             return
         }
+        var isStale = false
+        guard let sourceURL = try? URL(resolvingBookmarkData: data, options: [], relativeTo: nil, bookmarkDataIsStale: &isStale),
+              sourceURL.startAccessingSecurityScopedResource() else {
+            task.setTaskCompleted(success: false)
+            return
+        }
+        defer { sourceURL.stopAccessingSecurityScopedResource() }
 
-        let syncService = SyncService(
-            sourceDirectory: iCloudURL,
-            containerDirectory: containerURL
-        )
-
-        task.expirationHandler = { }
-
+        let syncService = SyncService(sourceDirectory: sourceURL, containerDirectory: containerURL)
+        task.expirationHandler = {}
         do {
             _ = try syncService.sync()
             task.setTaskCompleted(success: true)
