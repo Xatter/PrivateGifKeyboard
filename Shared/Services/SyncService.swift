@@ -51,6 +51,9 @@ final class SyncService {
             let destGifURL = containerDirectory
                 .appendingPathComponent("gifs")
                 .appendingPathComponent(filename)
+            if fileManager.fileExists(atPath: destGifURL.path) {
+                try fileManager.removeItem(at: destGifURL)
+            }
             try fileManager.copyItem(at: fileURL, to: destGifURL)
 
             // Generate thumbnail
@@ -59,6 +62,9 @@ final class SyncService {
             let destThumbURL = containerDirectory
                 .appendingPathComponent("thumbnails")
                 .appendingPathComponent(thumbFilename)
+            if fileManager.fileExists(atPath: destThumbURL.path) {
+                try fileManager.removeItem(at: destThumbURL)
+            }
             try ThumbnailGenerator.generateThumbnail(
                 from: fileURL, to: destThumbURL, maxPixelSize: 150)
 
