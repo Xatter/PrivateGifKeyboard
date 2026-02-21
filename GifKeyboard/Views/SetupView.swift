@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct SetupView: View {
-    let onComplete: () -> Void
+    let onFolderSelected: (URL) -> Void
+    @State private var showingPicker = false
 
     var body: some View {
-        VStack(spacing: 24) {
+        VStack(spacing: 32) {
             Spacer()
 
             Image(systemName: "keyboard")
@@ -14,25 +15,36 @@ struct SetupView: View {
             Text("GifKeyboard")
                 .font(.largeTitle.bold())
 
-            VStack(alignment: .leading, spacing: 16) {
-                step(number: 1, text: "Open Files app on your Mac or iPhone")
-                step(number: 2, text: "In iCloud Drive, create a folder called \"GifKeyboard\"")
-                step(number: 3, text: "Drop your GIF files into that folder")
-                step(number: 4, text: "Go to Settings > General > Keyboard > Keyboards > Add New Keyboard and add GifKeyboard")
-            }
-            .padding()
+            Text("Choose the folder where you keep your GIFs. The app will sync from there automatically.")
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
 
-            Spacer()
-
-            Button("I've Done This \u{2014} Let's Go") {
-                onComplete()
+            Button {
+                showingPicker = true
+            } label: {
+                Label("Choose GIF Folder", systemImage: "folder.badge.plus")
             }
             .buttonStyle(.borderedProminent)
             .controlSize(.large)
 
             Spacer()
+
+            VStack(alignment: .leading, spacing: 16) {
+                step(number: 1, text: "Go to Settings > General > Keyboard > Keyboards > Add New Keyboard")
+                step(number: 2, text: "Add \"GifKeyboard\" from the list")
+            }
+            .padding(.horizontal)
+            .padding(.bottom)
         }
         .padding()
+        .sheet(isPresented: $showingPicker) {
+            FolderPickerView(onFolderSelected: { url in
+                showingPicker = false
+                onFolderSelected(url)
+            })
+        }
     }
 
     private func step(number: Int, text: String) -> some View {
@@ -45,6 +57,8 @@ struct SetupView: View {
                 .clipShape(Circle())
             Text(text)
                 .font(.body)
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 }
