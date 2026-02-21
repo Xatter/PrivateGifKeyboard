@@ -32,8 +32,19 @@ struct SetupView: View {
             Spacer()
 
             VStack(alignment: .leading, spacing: 16) {
-                step(number: 1, text: "Go to Settings > General > Keyboard > Keyboards > Add New Keyboard")
-                step(number: 2, text: "Add \"GifKeyboard\" from the list")
+                step(number: 1, text: "Add GifKeyboard: Settings → General → Keyboard → Keyboards → Add New Keyboard")
+                step(number: 2, text: "Enable Allow Full Access under the GifKeyboard entry (required for GIF copying)")
+
+                Button {
+                    if let url = URL(string: "App-Prefs:root=General&path=Keyboard") {
+                        UIApplication.shared.open(url)
+                    }
+                } label: {
+                    Label("Open Keyboard Settings", systemImage: "gear")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered)
+                .padding(.top, 4)
             }
             .padding(.horizontal)
             .padding(.bottom)
