@@ -7,57 +7,83 @@ final class AppViewModel: ObservableObject {
     @Published var entries: [GifEntry] = []
     @Published var lastSynced: Date?
     @Published var isSyncing = false
-    @Published var hasCompletedSetup: Bool
+    @Published var syncStatus: String?
 
-    @AppStorage("hasCompletedSetup") private var setupCompleted = false
+    private static let bookmarkKey = "selectedFolderBookmark"
 
     private let containerURL: URL
-    private let iCloudURL: URL?
+
+    var hasFolderSelected: Bool {
+        UserDefaults.standard.data(forKey: Self.bookmarkKey) != nil
+    }
 
     init() {
-        self.hasCompletedSetup = UserDefaults.standard.bool(forKey: "hasCompletedSetup")
-
         self.containerURL = FileManager.default.containerURL(
             forSecurityApplicationGroupIdentifier: "group.com.extroverteddeveloper.GifKeyboard.shared"
         ) ?? FileManager.default.temporaryDirectory
 
-        self.iCloudURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)?
-            .appendingPathComponent("Documents")
-            .appendingPathComponent("GifKeyboard")
-
         loadIndex()
     }
 
-    func completeSetup() {
-        hasCompletedSetup = true
-        setupCompleted = true
+    // MARK: - Folder selection
+
+    func selectFolder(_ url: URL) {
+        guard url.startAccessingSecurityScopedResource() else { return }
+        defer { url.stopAccessingSecurityScopedResource() }
+        guard let bookmark = try? url.bookmarkData(
+            options: [],
+            includingResourceValuesForKeys: nil,
+            relativeTo: nil
+        ) else { return }
+        UserDefaults.standard.set(bookmark, forKey: Self.bookmarkKey)
     }
 
+    private func resolvedFolderURL() -> URL? {
+        guard let data = UserDefaults.standard.data(forKey: Self.bookmarkKey) else { return nil }
+        var isStale = false
+        guard let url = try? URL(
+            resolvingBookmarkData: data,
+            options: [],
+            relativeTo: nil,
+            bookmarkDataIsStale: &isStale
+        ) else { return nil }
+        if isStale, url.startAccessingSecurityScopedResource() {
+            defer { url.stopAccessingSecurityScopedResource() }
+            if let fresh = try? url.bookmarkData(options: [], includingResourceValuesForKeys: nil, relativeTo: nil) {
+                UserDefaults.standard.set(fresh, forKey: Self.bookmarkKey)
+            }
+        }
+        return url
+    }
+
+    // MARK: - Sync
+
     func syncNow() async {
-        guard let sourceURL = iCloudURL else { return }
+        guard let sourceURL = resolvedFolderURL() else {
+            syncStatus = "No folder selected — tap the folder icon to choose one"
+            return
+        }
+        guard sourceURL.startAccessingSecurityScopedResource() else {
+            syncStatus = "Error: Lost access to folder. Please select it again."
+            return
+        }
+        defer { sourceURL.stopAccessingSecurityScopedResource() }
 
         isSyncing = true
         defer { isSyncing = false }
 
         let fm = FileManager.default
-        try? fm.createDirectory(
-            at: containerURL.appendingPathComponent("gifs"),
-            withIntermediateDirectories: true)
-        try? fm.createDirectory(
-            at: containerURL.appendingPathComponent("thumbnails"),
-            withIntermediateDirectories: true)
+        try? fm.createDirectory(at: containerURL.appendingPathComponent("gifs"), withIntermediateDirectories: true)
+        try? fm.createDirectory(at: containerURL.appendingPathComponent("thumbnails"), withIntermediateDirectories: true)
 
-        let service = SyncService(
-            sourceDirectory: sourceURL,
-            containerDirectory: containerURL
-        )
-
+        let service = SyncService(sourceDirectory: sourceURL, containerDirectory: containerURL)
         do {
-            _ = try service.sync()
+            let result = try service.sync()
             lastSynced = Date()
             loadIndex()
+            syncStatus = "Synced: +\(result.added) added, \(result.removed) removed, \(entries.count) total"
         } catch {
-            print("Sync failed: \(error)")
+            syncStatus = "Sync error: \(error)"
         }
     }
 
