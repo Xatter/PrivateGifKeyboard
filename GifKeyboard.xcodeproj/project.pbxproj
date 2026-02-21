@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05C27D1AF9A2AB8B0770A809 /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5730D27EAE03E66E6CCCC20 /* ThumbnailGenerator.swift */; };
+		08FFC00B6CDF072E639CA1DE /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A0DBE4C9FB1FEA1A66E52 /* SetupView.swift */; };
+		0A921A456AB1CFE306B0A9AA /* GifPasteboardServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494987EB59074F74FE288CD0 /* GifPasteboardServiceTests.swift */; };
+		0CDBACB38801E296A2D8AC46 /* GifIndexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */; };
+		131870287F2BF1359C3EB04A /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5730D27EAE03E66E6CCCC20 /* ThumbnailGenerator.swift */; };
+		325E9A8492717591E4F6E157 /* GifSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AE753A05FF48D7929150A /* GifSearchServiceTests.swift */; };
+		357D52136582DC31886DAE83 /* TagExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF4F0048BFE45DCCD6F37A /* TagExtractorTests.swift */; };
+		3865EC7FB16700A1EC01DEAC /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5730D27EAE03E66E6CCCC20 /* ThumbnailGenerator.swift */; };
+		3B6375F38267691BA13B2272 /* GifSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */; };
+		489FF263D1AD2E2377C9CE90 /* GifKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F7B1561FAE8C41B8FF5D2 /* GifKeyboardApp.swift */; };
+		4D78EF3658846FB5D34A95C7 /* SyncServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7220933B3C4A0A8B43089571 /* SyncServiceTests.swift */; };
+		508A57D877299B8F33C68BE3 /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFBB2AEC49EE090ED774200 /* SyncService.swift */; };
+		509B43DB59C381B68BEBD4BD /* GifPasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */; };
+		6506C8797186405A45E13778 /* GifIndexStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DB347C8620A0D200B6ED /* GifIndexStoreTests.swift */; };
+		6A8A89AE7390C40ABAB81960 /* TagExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */; };
+		6AE4B33560929C3807C09073 /* ThumbnailGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51157C219E6AEB01DDFFC9 /* ThumbnailGeneratorTests.swift */; };
+		7BEA09BD0BA208082E47C05E /* GifEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A4218AAC2F84DE2488333 /* GifEntryTests.swift */; };
+		7C7A2BEF3EC57A4585689881 /* GifSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */; };
+		83FA4DE3B63F217E054D580A /* TagExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */; };
+		868BA909C239C1E552F6939F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C0E91322112F14D6FB2F48 /* KeyboardViewController.swift */; };
+		925860F0BBE2BEF8AB3CCD2F /* GifSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */; };
+		95C0A11737FE141CEA231D3F /* GifEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96102FE058DB45F45B0C246F /* GifEntry.swift */; };
+		979635B349FEA2D11DB883D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8E28BEAB497662221AA20A /* ContentView.swift */; };
+		B07F1F36908AB572D065DE85 /* GifIndexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */; };
+		B8B121886B7902849792D7D5 /* GifEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96102FE058DB45F45B0C246F /* GifEntry.swift */; };
+		BBEF2BA3DB7A290F543E1253 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CBA28EB27E31A9A1E6F0A6 /* AppViewModel.swift */; };
+		BF0446E47AAFEF060A1B100E /* GifKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 371D4FD73316B4E3FF660BC9 /* GifKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CBB00187FCFDB09ECCF4C141 /* GifGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E5F7313F1DC9284DCBE47 /* GifGridView.swift */; };
+		B1240B83849B41369D215843 /* FolderPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD326D8594E4E2E860A1A8E /* FolderPickerView.swift */; };
+		CBBA12A8B3B61CAE00348F7F /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFBB2AEC49EE090ED774200 /* SyncService.swift */; };
+		CBCFFBDACD8B9A82CC30FE30 /* GifIndexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */; };
+		D6F6F208DF6A24F7154D93A3 /* TagExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */; };
+		DC239F7A4DAE9C050FB4B7F6 /* GifEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96102FE058DB45F45B0C246F /* GifEntry.swift */; };
+		E593EAA11BBEBA5C5250078D /* GifPasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */; };
+		ECEEEA41BA2CE0BC737B83F4 /* GifPasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */; };
+		FAE6B9ACA0CDBB47B3A5546B /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFBB2AEC49EE090ED774200 /* SyncService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C18CC166967C2D159F25AB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CC3EB196AB0D14E87D04A00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71B53CC3B1BEDC3E596DCFD2;
+			remoteInfo = GifKeyboardExtension;
+		};
+		937BFA41D83FBDA7B4877CD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CC3EB196AB0D14E87D04A00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35406FE3D616188AC342B9E3;
+			remoteInfo = GifKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0CE7CC97F03635F258A0F898 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BF0446E47AAFEF060A1B100E /* GifKeyboardExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPasteboardService.swift; sourceTree = "<group>"; };
+		21213D52CFF2229797F0E9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2701B736B126F60824FC43C5 /* GifKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GifKeyboard.entitlements; sourceTree = "<group>"; };
+		2B6E5F7313F1DC9284DCBE47 /* GifGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifGridView.swift; sourceTree = "<group>"; };
+		8AD326D8594E4E2E860A1A8E /* FolderPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderPickerView.swift; sourceTree = "<group>"; };
+		31C0E91322112F14D6FB2F48 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		371D4FD73316B4E3FF660BC9 /* GifKeyboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GifKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BBF4F0048BFE45DCCD6F37A /* TagExtractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagExtractorTests.swift; sourceTree = "<group>"; };
+		3E57A3D4CFF73A106E26242B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifIndexStore.swift; sourceTree = "<group>"; };
+		4275B0533EF3730F10BD46A3 /* GifKeyboardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GifKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		494987EB59074F74FE288CD0 /* GifPasteboardServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPasteboardServiceTests.swift; sourceTree = "<group>"; };
+		55AB2E6648B2ABB3964674A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		579F7B1561FAE8C41B8FF5D2 /* GifKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifKeyboardApp.swift; sourceTree = "<group>"; };
+		6D8E28BEAB497662221AA20A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FB29FD03BDD3E2C7C971641 /* GifKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FFBB2AEC49EE090ED774200 /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
+		7220933B3C4A0A8B43089571 /* SyncServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncServiceTests.swift; sourceTree = "<group>"; };
+		75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagExtractor.swift; sourceTree = "<group>"; };
+		96102FE058DB45F45B0C246F /* GifEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEntry.swift; sourceTree = "<group>"; };
+		9C51157C219E6AEB01DDFFC9 /* ThumbnailGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGeneratorTests.swift; sourceTree = "<group>"; };
+		A5730D27EAE03E66E6CCCC20 /* ThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGenerator.swift; sourceTree = "<group>"; };
+		B44A4218AAC2F84DE2488333 /* GifEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEntryTests.swift; sourceTree = "<group>"; };
+		C7CBA28EB27E31A9A1E6F0A6 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		C7E3D5CBF2FFD08CD13C9F14 /* GifKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GifKeyboardExtension.entitlements; sourceTree = "<group>"; };
+		D3F6DB347C8620A0D200B6ED /* GifIndexStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifIndexStoreTests.swift; sourceTree = "<group>"; };
+		DB7A0DBE4C9FB1FEA1A66E52 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		DF9AE753A05FF48D7929150A /* GifSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchServiceTests.swift; sourceTree = "<group>"; };
+		E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2F14EB1525C705230F8C70AF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */,
+				183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */,
+				E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */,
+				6FFBB2AEC49EE090ED774200 /* SyncService.swift */,
+				75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */,
+				A5730D27EAE03E66E6CCCC20 /* ThumbnailGenerator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6065C61865981EDF02331A0C /* GifKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				B44A4218AAC2F84DE2488333 /* GifEntryTests.swift */,
+				D3F6DB347C8620A0D200B6ED /* GifIndexStoreTests.swift */,
+				494987EB59074F74FE288CD0 /* GifPasteboardServiceTests.swift */,
+				DF9AE753A05FF48D7929150A /* GifSearchServiceTests.swift */,
+				21213D52CFF2229797F0E9A5 /* Info.plist */,
+				7220933B3C4A0A8B43089571 /* SyncServiceTests.swift */,
+				3BBF4F0048BFE45DCCD6F37A /* TagExtractorTests.swift */,
+				9C51157C219E6AEB01DDFFC9 /* ThumbnailGeneratorTests.swift */,
+			);
+			path = GifKeyboardTests;
+			sourceTree = "<group>";
+		};
+		64E5CF22DE177791590CD9E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FB29FD03BDD3E2C7C971641 /* GifKeyboard.app */,
+				371D4FD73316B4E3FF660BC9 /* GifKeyboardExtension.appex */,
+				4275B0533EF3730F10BD46A3 /* GifKeyboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69313218FB36D131B0AAF983 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E5F7313F1DC9284DCBE47 /* GifGridView.swift */,
+				8AD326D8594E4E2E860A1A8E /* FolderPickerView.swift */,
+				DB7A0DBE4C9FB1FEA1A66E52 /* SetupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6DFC6D1B65659D0131C505A8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C4E94CBA9EF636568ED8AFDB /* Models */,
+				2F14EB1525C705230F8C70AF /* Services */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7F9744FDE67D4E4F9B340FED /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C7CBA28EB27E31A9A1E6F0A6 /* AppViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BECD6659BA17EA5C42E4D794 /* GifKeyboardExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C7E3D5CBF2FFD08CD13C9F14 /* GifKeyboardExtension.entitlements */,
+				55AB2E6648B2ABB3964674A7 /* Info.plist */,
+				31C0E91322112F14D6FB2F48 /* KeyboardViewController.swift */,
+			);
+			path = GifKeyboardExtension;
+			sourceTree = "<group>";
+		};
+		C4E94CBA9EF636568ED8AFDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96102FE058DB45F45B0C246F /* GifEntry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CDC8FC36891FEFAEC197012C /* GifKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6D8E28BEAB497662221AA20A /* ContentView.swift */,
+				2701B736B126F60824FC43C5 /* GifKeyboard.entitlements */,
+				579F7B1561FAE8C41B8FF5D2 /* GifKeyboardApp.swift */,
+				3E57A3D4CFF73A106E26242B /* Info.plist */,
+				7F9744FDE67D4E4F9B340FED /* ViewModels */,
+				69313218FB36D131B0AAF983 /* Views */,
+			);
+			path = GifKeyboard;
+			sourceTree = "<group>";
+		};
+		DEC027F76550B4CD5C9C0881 = {
+			isa = PBXGroup;
+			children = (
+				CDC8FC36891FEFAEC197012C /* GifKeyboard */,
+				BECD6659BA17EA5C42E4D794 /* GifKeyboardExtension */,
+				6065C61865981EDF02331A0C /* GifKeyboardTests */,
+				6DFC6D1B65659D0131C505A8 /* Shared */,
+				64E5CF22DE177791590CD9E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		35406FE3D616188AC342B9E3 /* GifKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A61DCCDC6AE483A8BB4360B /* Build configuration list for PBXNativeTarget "GifKeyboard" */;
+			buildPhases = (
+				C7C8F369C990C59D202BEAB6 /* Sources */,
+				0CE7CC97F03635F258A0F898 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EE116B0B0951685FEA6C09B /* PBXTargetDependency */,
+			);
+			name = GifKeyboard;
+			packageProductDependencies = (
+			);
+			productName = GifKeyboard;
+			productReference = 6FB29FD03BDD3E2C7C971641 /* GifKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71B53CC3B1BEDC3E596DCFD2 /* GifKeyboardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D504A1FE7465B9D741B6AAE6 /* Build configuration list for PBXNativeTarget "GifKeyboardExtension" */;
+			buildPhases = (
+				683ABD70E758C45DAFF8DA8C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GifKeyboardExtension;
+			packageProductDependencies = (
+			);
+			productName = GifKeyboardExtension;
+			productReference = 371D4FD73316B4E3FF660BC9 /* GifKeyboardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		FFDA1D3C33FC98407A5D9E53 /* GifKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 349869DBEE15907F5DFCAF31 /* Build configuration list for PBXNativeTarget "GifKeyboardTests" */;
+			buildPhases = (
+				1AC86865FE94F1448D2FBD41 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83FB4B51A4EE9E7E08188EA5 /* PBXTargetDependency */,
+			);
+			name = GifKeyboardTests;
+			packageProductDependencies = (
+			);
+			productName = GifKeyboardTests;
+			productReference = 4275B0533EF3730F10BD46A3 /* GifKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CC3EB196AB0D14E87D04A00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 224ED0CD63E6C4891707D860 /* Build configuration list for PBXProject "GifKeyboard" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = DEC027F76550B4CD5C9C0881;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				35406FE3D616188AC342B9E3 /* GifKeyboard */,
+				71B53CC3B1BEDC3E596DCFD2 /* GifKeyboardExtension */,
+				FFDA1D3C33FC98407A5D9E53 /* GifKeyboardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AC86865FE94F1448D2FBD41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C0A11737FE141CEA231D3F /* GifEntry.swift in Sources */,
+				7BEA09BD0BA208082E47C05E /* GifEntryTests.swift in Sources */,
+				CBCFFBDACD8B9A82CC30FE30 /* GifIndexStore.swift in Sources */,
+				6506C8797186405A45E13778 /* GifIndexStoreTests.swift in Sources */,
+				ECEEEA41BA2CE0BC737B83F4 /* GifPasteboardService.swift in Sources */,
+				0A921A456AB1CFE306B0A9AA /* GifPasteboardServiceTests.swift in Sources */,
+				3B6375F38267691BA13B2272 /* GifSearchService.swift in Sources */,
+				325E9A8492717591E4F6E157 /* GifSearchServiceTests.swift in Sources */,
+				508A57D877299B8F33C68BE3 /* SyncService.swift in Sources */,
+				4D78EF3658846FB5D34A95C7 /* SyncServiceTests.swift in Sources */,
+				83FA4DE3B63F217E054D580A /* TagExtractor.swift in Sources */,
+				357D52136582DC31886DAE83 /* TagExtractorTests.swift in Sources */,
+				3865EC7FB16700A1EC01DEAC /* ThumbnailGenerator.swift in Sources */,
+				6AE4B33560929C3807C09073 /* ThumbnailGeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		683ABD70E758C45DAFF8DA8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B121886B7902849792D7D5 /* GifEntry.swift in Sources */,
+				B07F1F36908AB572D065DE85 /* GifIndexStore.swift in Sources */,
+				509B43DB59C381B68BEBD4BD /* GifPasteboardService.swift in Sources */,
+				7C7A2BEF3EC57A4585689881 /* GifSearchService.swift in Sources */,
+				868BA909C239C1E552F6939F /* KeyboardViewController.swift in Sources */,
+				CBBA12A8B3B61CAE00348F7F /* SyncService.swift in Sources */,
+				D6F6F208DF6A24F7154D93A3 /* TagExtractor.swift in Sources */,
+				131870287F2BF1359C3EB04A /* ThumbnailGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C8F369C990C59D202BEAB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEF2BA3DB7A290F543E1253 /* AppViewModel.swift in Sources */,
+				979635B349FEA2D11DB883D5 /* ContentView.swift in Sources */,
+				DC239F7A4DAE9C050FB4B7F6 /* GifEntry.swift in Sources */,
+				CBB00187FCFDB09ECCF4C141 /* GifGridView.swift in Sources */,
+				B1240B83849B41369D215843 /* FolderPickerView.swift in Sources */,
+				0CDBACB38801E296A2D8AC46 /* GifIndexStore.swift in Sources */,
+				489FF263D1AD2E2377C9CE90 /* GifKeyboardApp.swift in Sources */,
+				E593EAA11BBEBA5C5250078D /* GifPasteboardService.swift in Sources */,
+				925860F0BBE2BEF8AB3CCD2F /* GifSearchService.swift in Sources */,
+				08FFC00B6CDF072E639CA1DE /* SetupView.swift in Sources */,
+				FAE6B9ACA0CDBB47B3A5546B /* SyncService.swift in Sources */,
+				6A8A89AE7390C40ABAB81960 /* TagExtractor.swift in Sources */,
+				05C27D1AF9A2AB8B0770A809 /* ThumbnailGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EE116B0B0951685FEA6C09B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71B53CC3B1BEDC3E596DCFD2 /* GifKeyboardExtension */;
+			targetProxy = 4C18CC166967C2D159F25AB7 /* PBXContainerItemProxy */;
+		};
+		83FB4B51A4EE9E7E08188EA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35406FE3D616188AC342B9E3 /* GifKeyboard */;
+			targetProxy = 937BFA41D83FBDA7B4877CD0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2380AF63D467B7D524F71FC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GifKeyboardExtension/GifKeyboardExtension.entitlements;
+				DEVELOPMENT_TEAM = SQ7Z33XY27;
+				INFOPLIST_FILE = GifKeyboardExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.keyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F604EB71FB2D3BC56B093D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		75EC32E0BD5CD5D493BF7907 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GifKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifKeyboard";
+			};
+			name = Release;
+		};
+		BF56B468E37AC874A347A33B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		C74EEB619C4E1750D98E0B3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GifKeyboardExtension/GifKeyboardExtension.entitlements;
+				DEVELOPMENT_TEAM = SQ7Z33XY27;
+				INFOPLIST_FILE = GifKeyboardExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.keyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D026C5BC47188F983741197A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GifKeyboard/GifKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = SQ7Z33XY27;
+				INFOPLIST_FILE = GifKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D6833360B2C62B40D5F5DAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GifKeyboard/GifKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = SQ7Z33XY27;
+				INFOPLIST_FILE = GifKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFE4ABC549C7202E057BEACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GifKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifKeyboard";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		224ED0CD63E6C4891707D860 /* Build configuration list for PBXProject "GifKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF56B468E37AC874A347A33B /* Debug */,
+				4F604EB71FB2D3BC56B093D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		349869DBEE15907F5DFCAF31 /* Build configuration list for PBXNativeTarget "GifKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE4ABC549C7202E057BEACF /* Debug */,
+				75EC32E0BD5CD5D493BF7907 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6A61DCCDC6AE483A8BB4360B /* Build configuration list for PBXNativeTarget "GifKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6833360B2C62B40D5F5DAD0 /* Debug */,
+				D026C5BC47188F983741197A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D504A1FE7465B9D741B6AAE6 /* Build configuration list for PBXNativeTarget "GifKeyboardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C74EEB619C4E1750D98E0B3C /* Debug */,
+				2380AF63D467B7D524F71FC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CC3EB196AB0D14E87D04A00 /* Project object */;
+}
