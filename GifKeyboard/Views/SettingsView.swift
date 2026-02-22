@@ -36,7 +36,9 @@ struct SettingsView: View {
         guard UIApplication.shared.supportsAlternateIcons else { return }
         UIApplication.shared.setAlternateIconName(option.alternateIconName) { error in
             if error == nil {
-                currentIcon = option
+                Task { @MainActor in
+                    self.currentIcon = option
+                }
             }
         }
     }
