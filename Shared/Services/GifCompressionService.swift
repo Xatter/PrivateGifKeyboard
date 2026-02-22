@@ -43,32 +43,34 @@ enum GifCompressionService {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
 
         for i in 0..<frameCount {
-            guard let frame = CGImageSourceCreateImageAtIndex(source, i, nil) else { continue }
+            autoreleasepool {
+                guard let frame = CGImageSourceCreateImageAtIndex(source, i, nil) else { return }
 
-            // Preserve per-frame delay — read unclamped first, fall back to clamped
-            let props = CGImageSourceCopyPropertiesAtIndex(source, i, nil) as? [CFString: Any]
-            let gifDict = props?[kCGImagePropertyGIFDictionary] as? [CFString: Any]
-            let delay = gifDict?[kCGImagePropertyGIFUnclampedDelayTime] as? Double
-                     ?? gifDict?[kCGImagePropertyGIFDelayTime] as? Double
-                     ?? 0.1
+                // Preserve per-frame delay — read unclamped first, fall back to clamped
+                let props = CGImageSourceCopyPropertiesAtIndex(source, i, nil) as? [CFString: Any]
+                let gifDict = props?[kCGImagePropertyGIFDictionary] as? [CFString: Any]
+                let delay = gifDict?[kCGImagePropertyGIFUnclampedDelayTime] as? Double
+                         ?? gifDict?[kCGImagePropertyGIFDelayTime] as? Double
+                         ?? 0.1
 
-            guard let ctx = CGContext(
-                data: nil, width: newWidth, height: newHeight,
-                bitsPerComponent: 8, bytesPerRow: newWidth * 4,
-                space: colorSpace,
-                bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
-            ) else { continue }
+                guard let ctx = CGContext(
+                    data: nil, width: newWidth, height: newHeight,
+                    bitsPerComponent: 8, bytesPerRow: newWidth * 4,
+                    space: colorSpace,
+                    bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
+                ) else { return }
 
-            ctx.draw(frame, in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+                ctx.draw(frame, in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
 
-            guard let scaled = ctx.makeImage() else { continue }
+                guard let scaled = ctx.makeImage() else { return }
 
-            CGImageDestinationAddImage(destination, scaled, [
-                kCGImagePropertyGIFDictionary: [
-                    kCGImagePropertyGIFDelayTime: delay,
-                    kCGImagePropertyGIFUnclampedDelayTime: delay
-                ]
-            ] as CFDictionary)
+                CGImageDestinationAddImage(destination, scaled, [
+                    kCGImagePropertyGIFDictionary: [
+                        kCGImagePropertyGIFDelayTime: delay,
+                        kCGImagePropertyGIFUnclampedDelayTime: delay
+                    ]
+                ] as CFDictionary)
+            }
         }
 
         guard CGImageDestinationFinalize(destination) else { return nil }
