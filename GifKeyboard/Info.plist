@@ -6,6 +6,30 @@
 	<array>
 		<string>com.extroverteddeveloper.GifKeyboard.refresh</string>
 	</array>
+	<key>CFBundleAlternateIcons</key>
+	<dict>
+		<key>AppIcon2</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon2</string>
+			</array>
+		</dict>
+		<key>AppIcon3</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon3</string>
+			</array>
+		</dict>
+		<key>AppIcon4</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon4</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -22,5 +46,17 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSUbiquitousContainers</key>
+	<dict>
+		<key>iCloud.com.extroverteddeveloper.GifKeyboard</key>
+		<dict>
+			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
+			<true/>
+			<key>NSUbiquitousContainerName</key>
+			<string>GifKeyboard</string>
+			<key>NSUbiquitousContainerSupportedFolderLevels</key>
+			<string>One</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

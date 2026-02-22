@@ -11,18 +11,24 @@
 		08FFC00B6CDF072E639CA1DE /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7A0DBE4C9FB1FEA1A66E52 /* SetupView.swift */; };
 		0A921A456AB1CFE306B0A9AA /* GifPasteboardServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494987EB59074F74FE288CD0 /* GifPasteboardServiceTests.swift */; };
 		0CDBACB38801E296A2D8AC46 /* GifIndexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */; };
+		0F93337A3C02969C11B3C1C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556006752564772A38041088 /* Assets.xcassets */; };
 		131870287F2BF1359C3EB04A /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5730D27EAE03E66E6CCCC20 /* ThumbnailGenerator.swift */; };
 		325E9A8492717591E4F6E157 /* GifSearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9AE753A05FF48D7929150A /* GifSearchServiceTests.swift */; };
 		357D52136582DC31886DAE83 /* TagExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBF4F0048BFE45DCCD6F37A /* TagExtractorTests.swift */; };
 		3865EC7FB16700A1EC01DEAC /* ThumbnailGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5730D27EAE03E66E6CCCC20 /* ThumbnailGenerator.swift */; };
 		3B6375F38267691BA13B2272 /* GifSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */; };
 		489FF263D1AD2E2377C9CE90 /* GifKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579F7B1561FAE8C41B8FF5D2 /* GifKeyboardApp.swift */; };
+		4B96E55B653C86D1FBE8B803 /* GifCompressionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DEC5BBF814F82AB1D775B /* GifCompressionService.swift */; };
 		4D78EF3658846FB5D34A95C7 /* SyncServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7220933B3C4A0A8B43089571 /* SyncServiceTests.swift */; };
 		508A57D877299B8F33C68BE3 /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFBB2AEC49EE090ED774200 /* SyncService.swift */; };
 		509B43DB59C381B68BEBD4BD /* GifPasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */; };
+		52DE6B2646DA9B10180846F3 /* AppIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F8633E4BA48402E0F7382D /* AppIcon@3x.png */; };
+		5988D9FC99854E19B3B68DEF /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 67D6C034EFD55748658D630A /* AppIcon@2x.png */; };
 		6506C8797186405A45E13778 /* GifIndexStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DB347C8620A0D200B6ED /* GifIndexStoreTests.swift */; };
+		68A8C6C08D9897732924AF09 /* AppIcon3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A254B0F351BA37C408C0ECF /* AppIcon3@3x.png */; };
 		6A8A89AE7390C40ABAB81960 /* TagExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */; };
 		6AE4B33560929C3807C09073 /* ThumbnailGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C51157C219E6AEB01DDFFC9 /* ThumbnailGeneratorTests.swift */; };
+		7B2D4B066ABD129FF743987D /* AppIcon2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4BBD64D60CE27E194CE6217 /* AppIcon2@3x.png */; };
 		7BEA09BD0BA208082E47C05E /* GifEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A4218AAC2F84DE2488333 /* GifEntryTests.swift */; };
 		7C7A2BEF3EC57A4585689881 /* GifSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */; };
 		83FA4DE3B63F217E054D580A /* TagExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */; };
@@ -31,18 +37,24 @@
 		925860F0BBE2BEF8AB3CCD2F /* GifSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */; };
 		95C0A11737FE141CEA231D3F /* GifEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96102FE058DB45F45B0C246F /* GifEntry.swift */; };
 		979635B349FEA2D11DB883D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8E28BEAB497662221AA20A /* ContentView.swift */; };
+		98BE933F664871FF07E94513 /* GifCompressionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DEC5BBF814F82AB1D775B /* GifCompressionService.swift */; };
 		A119D484F1D3957D4B0F46FB /* FolderPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA7E28D68AC5D519D01233 /* FolderPickerView.swift */; };
+		A3FA0F0D3B6B66F02ECB7356 /* AppIcon4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D2E11832E36DDE11435B539 /* AppIcon4@3x.png */; };
 		B07F1F36908AB572D065DE85 /* GifIndexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */; };
 		B8B121886B7902849792D7D5 /* GifEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96102FE058DB45F45B0C246F /* GifEntry.swift */; };
 		BBEF2BA3DB7A290F543E1253 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CBA28EB27E31A9A1E6F0A6 /* AppViewModel.swift */; };
 		BF0446E47AAFEF060A1B100E /* GifKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 371D4FD73316B4E3FF660BC9 /* GifKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C6EDDFB470278B51E1D36922 /* AppIcon4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C78F2F098EABBBC873B17804 /* AppIcon4@2x.png */; };
+		CA7DA538A8754635E80EBB7D /* AppIcon3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C6B63885B73DF32FAFF6C50D /* AppIcon3@2x.png */; };
 		CBB00187FCFDB09ECCF4C141 /* GifGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E5F7313F1DC9284DCBE47 /* GifGridView.swift */; };
 		CBBA12A8B3B61CAE00348F7F /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFBB2AEC49EE090ED774200 /* SyncService.swift */; };
 		CBCFFBDACD8B9A82CC30FE30 /* GifIndexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */; };
 		D6F6F208DF6A24F7154D93A3 /* TagExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */; };
 		DC239F7A4DAE9C050FB4B7F6 /* GifEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96102FE058DB45F45B0C246F /* GifEntry.swift */; };
+		DD53D38251FCC615352722D1 /* GifCompressionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DEC5BBF814F82AB1D775B /* GifCompressionService.swift */; };
 		E593EAA11BBEBA5C5250078D /* GifPasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */; };
 		ECEEEA41BA2CE0BC737B83F4 /* GifPasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */; };
+		F2A91E74A43F21997CAFAF26 /* AppIcon2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF53201D974B3689621234D3 /* AppIcon2@2x.png */; };
 		FAE6B9ACA0CDBB47B3A5546B /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFBB2AEC49EE090ED774200 /* SyncService.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,8 +91,10 @@
 
 /* Begin PBXFileReference section */
 		183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPasteboardService.swift; sourceTree = "<group>"; };
+		1D2E11832E36DDE11435B539 /* AppIcon4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon4@3x.png"; sourceTree = "<group>"; };
 		21213D52CFF2229797F0E9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2701B736B126F60824FC43C5 /* GifKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GifKeyboard.entitlements; sourceTree = "<group>"; };
+		2A254B0F351BA37C408C0ECF /* AppIcon3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon3@3x.png"; sourceTree = "<group>"; };
 		2B6E5F7313F1DC9284DCBE47 /* GifGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifGridView.swift; sourceTree = "<group>"; };
 		2EDA7E28D68AC5D519D01233 /* FolderPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderPickerView.swift; sourceTree = "<group>"; };
 		31C0E91322112F14D6FB2F48 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +104,11 @@
 		3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifIndexStore.swift; sourceTree = "<group>"; };
 		4275B0533EF3730F10BD46A3 /* GifKeyboardTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GifKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		494987EB59074F74FE288CD0 /* GifPasteboardServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifPasteboardServiceTests.swift; sourceTree = "<group>"; };
+		556006752564772A38041088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55AB2E6648B2ABB3964674A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		579F7B1561FAE8C41B8FF5D2 /* GifKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifKeyboardApp.swift; sourceTree = "<group>"; };
+		61F8633E4BA48402E0F7382D /* AppIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@3x.png"; sourceTree = "<group>"; };
+		67D6C034EFD55748658D630A /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = "<group>"; };
 		6D8E28BEAB497662221AA20A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FB29FD03BDD3E2C7C971641 /* GifKeyboard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GifKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFBB2AEC49EE090ED774200 /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
@@ -101,19 +118,25 @@
 		9C51157C219E6AEB01DDFFC9 /* ThumbnailGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGeneratorTests.swift; sourceTree = "<group>"; };
 		A5730D27EAE03E66E6CCCC20 /* ThumbnailGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailGenerator.swift; sourceTree = "<group>"; };
 		B44A4218AAC2F84DE2488333 /* GifEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEntryTests.swift; sourceTree = "<group>"; };
+		C6B63885B73DF32FAFF6C50D /* AppIcon3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon3@2x.png"; sourceTree = "<group>"; };
+		C78F2F098EABBBC873B17804 /* AppIcon4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon4@2x.png"; sourceTree = "<group>"; };
 		C7CBA28EB27E31A9A1E6F0A6 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		C7E3D5CBF2FFD08CD13C9F14 /* GifKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GifKeyboardExtension.entitlements; sourceTree = "<group>"; };
 		C8679A4677FC9D7DDB0FA242 /* GifCompressionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCompressionServiceTests.swift; sourceTree = "<group>"; };
 		D3F6DB347C8620A0D200B6ED /* GifIndexStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifIndexStoreTests.swift; sourceTree = "<group>"; };
+		D4BBD64D60CE27E194CE6217 /* AppIcon2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon2@3x.png"; sourceTree = "<group>"; };
+		D62DEC5BBF814F82AB1D775B /* GifCompressionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCompressionService.swift; sourceTree = "<group>"; };
 		DB7A0DBE4C9FB1FEA1A66E52 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		DF9AE753A05FF48D7929150A /* GifSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchServiceTests.swift; sourceTree = "<group>"; };
 		E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchService.swift; sourceTree = "<group>"; };
+		FF53201D974B3689621234D3 /* AppIcon2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon2@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		2F14EB1525C705230F8C70AF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D62DEC5BBF814F82AB1D775B /* GifCompressionService.swift */,
 				3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */,
 				183B81CF824A887F3FC8D084 /* GifPasteboardService.swift */,
 				E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */,
@@ -198,6 +221,15 @@
 		CDC8FC36891FEFAEC197012C /* GifKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				67D6C034EFD55748658D630A /* AppIcon@2x.png */,
+				61F8633E4BA48402E0F7382D /* AppIcon@3x.png */,
+				FF53201D974B3689621234D3 /* AppIcon2@2x.png */,
+				D4BBD64D60CE27E194CE6217 /* AppIcon2@3x.png */,
+				C6B63885B73DF32FAFF6C50D /* AppIcon3@2x.png */,
+				2A254B0F351BA37C408C0ECF /* AppIcon3@3x.png */,
+				C78F2F098EABBBC873B17804 /* AppIcon4@2x.png */,
+				1D2E11832E36DDE11435B539 /* AppIcon4@3x.png */,
+				556006752564772A38041088 /* Assets.xcassets */,
 				6D8E28BEAB497662221AA20A /* ContentView.swift */,
 				2701B736B126F60824FC43C5 /* GifKeyboard.entitlements */,
 				579F7B1561FAE8C41B8FF5D2 /* GifKeyboardApp.swift */,
@@ -227,6 +259,7 @@
 			buildConfigurationList = 6A61DCCDC6AE483A8BB4360B /* Build configuration list for PBXNativeTarget "GifKeyboard" */;
 			buildPhases = (
 				C7C8F369C990C59D202BEAB6 /* Sources */,
+				02422FBB812426AD65AC4641 /* Resources */,
 				0CE7CC97F03635F258A0F898 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -306,11 +339,31 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		02422FBB812426AD65AC4641 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A91E74A43F21997CAFAF26 /* AppIcon2@2x.png in Resources */,
+				7B2D4B066ABD129FF743987D /* AppIcon2@3x.png in Resources */,
+				CA7DA538A8754635E80EBB7D /* AppIcon3@2x.png in Resources */,
+				68A8C6C08D9897732924AF09 /* AppIcon3@3x.png in Resources */,
+				C6EDDFB470278B51E1D36922 /* AppIcon4@2x.png in Resources */,
+				A3FA0F0D3B6B66F02ECB7356 /* AppIcon4@3x.png in Resources */,
+				5988D9FC99854E19B3B68DEF /* AppIcon@2x.png in Resources */,
+				52DE6B2646DA9B10180846F3 /* AppIcon@3x.png in Resources */,
+				0F93337A3C02969C11B3C1C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1AC86865FE94F1448D2FBD41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD53D38251FCC615352722D1 /* GifCompressionService.swift in Sources */,
 				89F6377023476A74A3E9E575 /* GifCompressionServiceTests.swift in Sources */,
 				95C0A11737FE141CEA231D3F /* GifEntry.swift in Sources */,
 				7BEA09BD0BA208082E47C05E /* GifEntryTests.swift in Sources */,
@@ -333,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98BE933F664871FF07E94513 /* GifCompressionService.swift in Sources */,
 				B8B121886B7902849792D7D5 /* GifEntry.swift in Sources */,
 				B07F1F36908AB572D065DE85 /* GifIndexStore.swift in Sources */,
 				509B43DB59C381B68BEBD4BD /* GifPasteboardService.swift in Sources */,
@@ -351,6 +405,7 @@
 				BBEF2BA3DB7A290F543E1253 /* AppViewModel.swift in Sources */,
 				979635B349FEA2D11DB883D5 /* ContentView.swift in Sources */,
 				A119D484F1D3957D4B0F46FB /* FolderPickerView.swift in Sources */,
+				4B96E55B653C86D1FBE8B803 /* GifCompressionService.swift in Sources */,
 				DC239F7A4DAE9C050FB4B7F6 /* GifEntry.swift in Sources */,
 				CBB00187FCFDB09ECCF4C141 /* GifGridView.swift in Sources */,
 				0CDBACB38801E296A2D8AC46 /* GifIndexStore.swift in Sources */,
@@ -390,7 +445,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.keyboard;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,7 +517,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.tests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifKeyboard";
@@ -542,7 +597,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.keyboard;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -559,7 +614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -576,7 +631,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -592,7 +647,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.tests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifKeyboard";
