@@ -31,7 +31,8 @@ A privacy-first iOS GIF keyboard that reads from your iCloud Drive. Zero network
 
 1. **Clone and open the project:**
    ```bash
-   cd /Users/xatter/code/GifKeyboard
+   git clone https://github.com/Xatter/PrivateGifKeyboard.git
+   cd PrivateGifKeyboard
    xcodegen generate
    open GifKeyboard.xcodeproj
    ```
