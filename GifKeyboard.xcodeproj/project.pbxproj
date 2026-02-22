@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,15 +27,16 @@
 		7C7A2BEF3EC57A4585689881 /* GifSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */; };
 		83FA4DE3B63F217E054D580A /* TagExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */; };
 		868BA909C239C1E552F6939F /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C0E91322112F14D6FB2F48 /* KeyboardViewController.swift */; };
+		89F6377023476A74A3E9E575 /* GifCompressionServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8679A4677FC9D7DDB0FA242 /* GifCompressionServiceTests.swift */; };
 		925860F0BBE2BEF8AB3CCD2F /* GifSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DA2C1BED6B0554E95D5EAD /* GifSearchService.swift */; };
 		95C0A11737FE141CEA231D3F /* GifEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96102FE058DB45F45B0C246F /* GifEntry.swift */; };
 		979635B349FEA2D11DB883D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8E28BEAB497662221AA20A /* ContentView.swift */; };
+		A119D484F1D3957D4B0F46FB /* FolderPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDA7E28D68AC5D519D01233 /* FolderPickerView.swift */; };
 		B07F1F36908AB572D065DE85 /* GifIndexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */; };
 		B8B121886B7902849792D7D5 /* GifEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96102FE058DB45F45B0C246F /* GifEntry.swift */; };
 		BBEF2BA3DB7A290F543E1253 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CBA28EB27E31A9A1E6F0A6 /* AppViewModel.swift */; };
 		BF0446E47AAFEF060A1B100E /* GifKeyboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 371D4FD73316B4E3FF660BC9 /* GifKeyboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CBB00187FCFDB09ECCF4C141 /* GifGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E5F7313F1DC9284DCBE47 /* GifGridView.swift */; };
-		B1240B83849B41369D215843 /* FolderPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD326D8594E4E2E860A1A8E /* FolderPickerView.swift */; };
 		CBBA12A8B3B61CAE00348F7F /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFBB2AEC49EE090ED774200 /* SyncService.swift */; };
 		CBCFFBDACD8B9A82CC30FE30 /* GifIndexStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */; };
 		D6F6F208DF6A24F7154D93A3 /* TagExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */; };
@@ -81,9 +82,9 @@
 		21213D52CFF2229797F0E9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2701B736B126F60824FC43C5 /* GifKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GifKeyboard.entitlements; sourceTree = "<group>"; };
 		2B6E5F7313F1DC9284DCBE47 /* GifGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifGridView.swift; sourceTree = "<group>"; };
-		8AD326D8594E4E2E860A1A8E /* FolderPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderPickerView.swift; sourceTree = "<group>"; };
+		2EDA7E28D68AC5D519D01233 /* FolderPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderPickerView.swift; sourceTree = "<group>"; };
 		31C0E91322112F14D6FB2F48 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		371D4FD73316B4E3FF660BC9 /* GifKeyboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GifKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		371D4FD73316B4E3FF660BC9 /* GifKeyboardExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = GifKeyboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BBF4F0048BFE45DCCD6F37A /* TagExtractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagExtractorTests.swift; sourceTree = "<group>"; };
 		3E57A3D4CFF73A106E26242B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3EEB355CCA903DE970AAF6CA /* GifIndexStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifIndexStore.swift; sourceTree = "<group>"; };
@@ -92,7 +93,7 @@
 		55AB2E6648B2ABB3964674A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		579F7B1561FAE8C41B8FF5D2 /* GifKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifKeyboardApp.swift; sourceTree = "<group>"; };
 		6D8E28BEAB497662221AA20A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6FB29FD03BDD3E2C7C971641 /* GifKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FB29FD03BDD3E2C7C971641 /* GifKeyboard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GifKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFBB2AEC49EE090ED774200 /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
 		7220933B3C4A0A8B43089571 /* SyncServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncServiceTests.swift; sourceTree = "<group>"; };
 		75D9CB8F44B6027AF8FCC101 /* TagExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagExtractor.swift; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 		B44A4218AAC2F84DE2488333 /* GifEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEntryTests.swift; sourceTree = "<group>"; };
 		C7CBA28EB27E31A9A1E6F0A6 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		C7E3D5CBF2FFD08CD13C9F14 /* GifKeyboardExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GifKeyboardExtension.entitlements; sourceTree = "<group>"; };
+		C8679A4677FC9D7DDB0FA242 /* GifCompressionServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCompressionServiceTests.swift; sourceTree = "<group>"; };
 		D3F6DB347C8620A0D200B6ED /* GifIndexStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifIndexStoreTests.swift; sourceTree = "<group>"; };
 		DB7A0DBE4C9FB1FEA1A66E52 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		DF9AE753A05FF48D7929150A /* GifSearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifSearchServiceTests.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		6065C61865981EDF02331A0C /* GifKeyboardTests */ = {
 			isa = PBXGroup;
 			children = (
+				C8679A4677FC9D7DDB0FA242 /* GifCompressionServiceTests.swift */,
 				B44A4218AAC2F84DE2488333 /* GifEntryTests.swift */,
 				D3F6DB347C8620A0D200B6ED /* GifIndexStoreTests.swift */,
 				494987EB59074F74FE288CD0 /* GifPasteboardServiceTests.swift */,
@@ -150,8 +153,8 @@
 		69313218FB36D131B0AAF983 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2EDA7E28D68AC5D519D01233 /* FolderPickerView.swift */,
 				2B6E5F7313F1DC9284DCBE47 /* GifGridView.swift */,
-				8AD326D8594E4E2E860A1A8E /* FolderPickerView.swift */,
 				DB7A0DBE4C9FB1FEA1A66E52 /* SetupView.swift */,
 			);
 			path = Views;
@@ -292,6 +295,7 @@
 			);
 			mainGroup = DEC027F76550B4CD5C9C0881;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -307,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F6377023476A74A3E9E575 /* GifCompressionServiceTests.swift in Sources */,
 				95C0A11737FE141CEA231D3F /* GifEntry.swift in Sources */,
 				7BEA09BD0BA208082E47C05E /* GifEntryTests.swift in Sources */,
 				CBCFFBDACD8B9A82CC30FE30 /* GifIndexStore.swift in Sources */,
@@ -345,9 +350,9 @@
 			files = (
 				BBEF2BA3DB7A290F543E1253 /* AppViewModel.swift in Sources */,
 				979635B349FEA2D11DB883D5 /* ContentView.swift in Sources */,
+				A119D484F1D3957D4B0F46FB /* FolderPickerView.swift in Sources */,
 				DC239F7A4DAE9C050FB4B7F6 /* GifEntry.swift in Sources */,
 				CBB00187FCFDB09ECCF4C141 /* GifGridView.swift in Sources */,
-				B1240B83849B41369D215843 /* FolderPickerView.swift in Sources */,
 				0CDBACB38801E296A2D8AC46 /* GifIndexStore.swift in Sources */,
 				489FF263D1AD2E2377C9CE90 /* GifKeyboardApp.swift in Sources */,
 				E593EAA11BBEBA5C5250078D /* GifPasteboardService.swift in Sources */,
@@ -379,14 +384,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GifKeyboardExtension/GifKeyboardExtension.entitlements;
-				DEVELOPMENT_TEAM = SQ7Z33XY27;
 				INFOPLIST_FILE = GifKeyboardExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app.keyboard;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,7 +462,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app.tests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifKeyboard";
@@ -532,14 +536,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GifKeyboardExtension/GifKeyboardExtension.entitlements;
-				DEVELOPMENT_TEAM = SQ7Z33XY27;
 				INFOPLIST_FILE = GifKeyboardExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.keyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app.keyboard;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -551,13 +554,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GifKeyboard/GifKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = SQ7Z33XY27;
 				INFOPLIST_FILE = GifKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -569,13 +571,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GifKeyboard/GifKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = SQ7Z33XY27;
 				INFOPLIST_FILE = GifKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -591,7 +592,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.extroverteddeveloper.GifKeyboard.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gifkeyboard.app.tests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifKeyboard";
