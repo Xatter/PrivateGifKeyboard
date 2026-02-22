@@ -9,7 +9,7 @@ TEAM_ID="SQ7Z33XY27"
 
 # Build iOS app
 echo "Building GifKeyboard (iOS)..."
-xcodebuild -project "$PROJECT" -scheme "GifKeyboard" -destination "id=$DEVICE_UDID" -configuration "$CONFIG" DEVELOPMENT_TEAM="$TEAM_ID" CODE_SIGN_STYLE=Automatic build
+xcodebuild -project "$PROJECT" -scheme "GifKeyboard" -destination "id=$DEVICE_UDID" -configuration "$CONFIG" DEVELOPMENT_TEAM="$TEAM_ID" CODE_SIGN_STYLE=Automatic -allowProvisioningUpdates build
 
 # Find built app
 APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData/GifKeyboard-*/Build/Products/Debug-iphoneos -name "GifKeyboard.app" -type d 2>/dev/null | head -1)
