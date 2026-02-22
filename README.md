@@ -4,7 +4,7 @@ A privacy-first iOS GIF keyboard that reads from your iCloud Drive. Zero network
 
 ## Features
 
-- 🔒 **100% Private** — No network access from the keyboard extension (`RequestsOpenAccess = false`)
+- 🔒 **100% Private** — No network code in the keyboard extension. Full access is required only to write GIFs to the system pasteboard, not for network access.
 - 📁 **iCloud Drive Based** — Just drop GIFs into a folder, no server needed
 - 🔍 **Smart Search** — Search by filename or macOS Finder tags
 - ⚡ **Fast & Lightweight** — Thumbnails cached locally, ~30MB memory limit
@@ -140,7 +140,7 @@ macOS Finder tags → iCloud Drive/GifKeyboard/*.gif
 
 ### Privacy Guarantees
 
-- **No network access** — `RequestsOpenAccess = false` in the keyboard extension's Info.plist
+- **No network access** — Full access is requested only to write GIFs to `UIPasteboard.general`. The keyboard extension contains no network code.
 - **No keylogging** — The keyboard never sees what you type in other apps
 - **No analytics** — No telemetry, no crash reporting, no tracking
 - **No recents tracking** — We don't log which GIFs you use
