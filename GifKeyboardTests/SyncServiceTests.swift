@@ -97,6 +97,22 @@ final class SyncServiceTests: XCTestCase {
         XCTAssertEqual(entries[0].filename, "real.gif")
     }
 
+
+    func testSyncStoresFileSizeMatchingContainerFile() throws {
+        createTestGif(at: sourceDir.appendingPathComponent("test.gif"))
+
+        _ = try syncService.sync()
+
+        let store = GifIndexStore(containerURL: containerDir)
+        let entries = try store.load()
+        XCTAssertEqual(entries.count, 1)
+
+        let containerGifURL = containerDir.appendingPathComponent("gifs/test.gif")
+        let attrs = try FileManager.default.attributesOfItem(atPath: containerGifURL.path)
+        let actualSize = attrs[.size] as? Int64 ?? 0
+        XCTAssertEqual(entries[0].fileSize, actualSize)
+    }
+
     // MARK: - Helpers
 
     private func createTestGif(at url: URL, frameCount: Int = 2) {

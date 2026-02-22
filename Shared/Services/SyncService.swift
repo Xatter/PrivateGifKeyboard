@@ -42,7 +42,7 @@ final class SyncService {
             guard !existingFilenames.contains(filename) else { continue }
 
             let resourceValues = try fileURL.resourceValues(forKeys: [.fileSizeKey])
-            let fileSize = Int64(resourceValues.fileSize ?? 0)
+            let sourceFileSize = Int64(resourceValues.fileSize ?? 0)
 
             // Extract tags
             let tags = TagExtractor.extractTags(from: fileURL)
@@ -55,6 +55,15 @@ final class SyncService {
                 try fileManager.removeItem(at: destGifURL)
             }
             try fileManager.copyItem(at: fileURL, to: destGifURL)
+
+            // Compress large GIFs in place — fall back to original on any failure
+            var effectiveFileSize = sourceFileSize
+            if let gifData = try? Data(contentsOf: destGifURL),
+               let compressed = GifCompressionService.compress(data: gifData) {
+                if (try? compressed.write(to: destGifURL, options: .atomic)) != nil {
+                    effectiveFileSize = Int64(compressed.count)
+                }
+            }
 
             // Generate thumbnail
             let thumbFilename = filename.replacingOccurrences(
@@ -73,7 +82,7 @@ final class SyncService {
                 tags: tags,
                 thumbnailPath: "thumbnails/\(thumbFilename)",
                 gifPath: "gifs/\(filename)",
-                fileSize: fileSize,
+                fileSize: effectiveFileSize,
                 dateAdded: Date()
             )
             existing.append(entry)
