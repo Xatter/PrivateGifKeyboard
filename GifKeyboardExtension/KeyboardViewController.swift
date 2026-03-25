@@ -281,9 +281,21 @@ extension KeyboardViewController: UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: GifCell.reuseID, for: indexPath) as! GifCell
         let entry = filteredEntries[indexPath.item]
-        let thumbURL = containerURL.appendingPathComponent(entry.thumbnailPath)
-        cell.configure(with: thumbURL)
+        let gifURL = containerURL.appendingPathComponent(entry.gifPath)
+        cell.configure(with: gifURL)
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        (cell as? GifCell)?.startAnimating()
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didEndDisplaying cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        (cell as? GifCell)?.stopAnimating()
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -306,37 +318,38 @@ extension KeyboardViewController: UICollectionViewDataSource, UICollectionViewDe
 private final class GifCell: UICollectionViewCell {
     static let reuseID = "GifCell"
 
-    private let imageView = UIImageView()
+    private let animatedView = AnimatedGifImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 6
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(imageView)
+        animatedView.contentMode = .scaleAspectFill
+        animatedView.layer.cornerRadius = 6
+        animatedView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(animatedView)
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            animatedView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            animatedView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            animatedView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            animatedView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
 
     required init?(coder: NSCoder) { fatalError() }
 
-    func configure(with thumbnailURL: URL) {
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            guard let data = try? Data(contentsOf: thumbnailURL),
-                  let image = UIImage(data: data) else { return }
-            DispatchQueue.main.async {
-                self?.imageView.image = image
-            }
-        }
+    func configure(with gifURL: URL) {
+        animatedView.loadGif(from: gifURL)
+    }
+
+    func startAnimating() {
+        animatedView.startAnimating()
+    }
+
+    func stopAnimating() {
+        animatedView.stopAnimating()
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView.image = nil
+        animatedView.reset()
     }
 }

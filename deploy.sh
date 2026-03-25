@@ -7,6 +7,11 @@ PROJECT="GifKeyboard.xcodeproj"
 CONFIG="Debug"
 TEAM_ID="SQ7Z33XY27"
 
+# Clean cached builds
+echo "Cleaning cached builds..."
+xcodebuild -project "$PROJECT" -scheme "GifKeyboard" -configuration "$CONFIG" clean 2>/dev/null || true
+rm -rf ~/Library/Developer/Xcode/DerivedData/GifKeyboard-*
+
 # Build iOS app
 echo "Building GifKeyboard (iOS)..."
 xcodebuild -project "$PROJECT" -scheme "GifKeyboard" -destination "id=$DEVICE_UDID" -configuration "$CONFIG" DEVELOPMENT_TEAM="$TEAM_ID" CODE_SIGN_STYLE=Automatic -allowProvisioningUpdates build

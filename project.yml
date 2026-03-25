@@ -8,6 +8,10 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.9"
+    SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+    SUPPORTS_MACCATALYST: "NO"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: SQ7Z33XY27
 
 targets:
   GifKeyboard:
@@ -50,6 +54,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.extroverteddeveloper.GifKeyboard
         INFOPLIST_FILE: GifKeyboard/Info.plist
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
     dependencies:
       - target: GifKeyboardExtension
 
@@ -80,6 +85,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.extroverteddeveloper.GifKeyboard.keyboard
         INFOPLIST_FILE: GifKeyboardExtension/Info.plist
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
 
   GifKeyboardTests:
     type: bundle.unit-test
@@ -97,3 +103,18 @@ targets:
         INFOPLIST_FILE: GifKeyboardTests/Info.plist
         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/GifKeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GifKeyboard"
         BUNDLE_LOADER: "$(TEST_HOST)"
+        SUPPORTED_PLATFORMS: "iphoneos iphonesimulator"
+
+schemes:
+  GifKeyboard:
+    build:
+      targets:
+        GifKeyboard: all
+        GifKeyboardExtension: all
+        GifKeyboardTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - GifKeyboardTests
