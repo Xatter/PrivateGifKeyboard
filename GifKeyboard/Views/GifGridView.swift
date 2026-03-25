@@ -14,7 +14,8 @@ struct GifGridView: View {
                 ForEach(entries) { entry in
                     let gifURL = containerURL.appendingPathComponent(entry.gifPath)
                     AnimatedGifView(url: gifURL)
-                        .aspectRatio(1, contentMode: .fill)
+                        .aspectRatio(1, contentMode: .fit)
+                        .clipped()
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                 }
             }
