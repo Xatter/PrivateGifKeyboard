@@ -2,16 +2,16 @@ import Foundation
 
 enum AppIconOption: String, CaseIterable {
     case `default` = "AppIcon"
+    case icon1 = "AppIcon1"
     case icon2 = "AppIcon2"
     case icon3 = "AppIcon3"
-    case icon4 = "AppIcon4"
 
     var displayName: String {
         switch self {
-        case .default: return "Icon 1"
+        case .default: return "Icon 4"
+        case .icon1:   return "Icon 1"
         case .icon2:   return "Icon 2"
         case .icon3:   return "Icon 3"
-        case .icon4:   return "Icon 4"
         }
     }
 

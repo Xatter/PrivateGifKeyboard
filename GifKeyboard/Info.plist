@@ -8,6 +8,13 @@
 	</array>
 	<key>CFBundleAlternateIcons</key>
 	<dict>
+		<key>AppIcon1</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>AppIcon1</string>
+			</array>
+		</dict>
 		<key>AppIcon2</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
@@ -20,13 +27,6 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>AppIcon3</string>
-			</array>
-		</dict>
-		<key>AppIcon4</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>AppIcon4</string>
 			</array>
 		</dict>
 	</dict>

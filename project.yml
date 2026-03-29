@@ -40,15 +40,15 @@ targets:
             NSUbiquitousContainerSupportedFolderLevels: One
             NSUbiquitousContainerName: GifKeyboard
         CFBundleAlternateIcons:
+          AppIcon1:
+            CFBundleIconFiles:
+              - AppIcon1
           AppIcon2:
             CFBundleIconFiles:
               - AppIcon2
           AppIcon3:
             CFBundleIconFiles:
               - AppIcon3
-          AppIcon4:
-            CFBundleIconFiles:
-              - AppIcon4
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.extroverteddeveloper.GifKeyboard
